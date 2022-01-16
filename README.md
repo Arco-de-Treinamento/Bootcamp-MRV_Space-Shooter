@@ -1,5 +1,9 @@
 <h1 align="center">Space Shoote - MRV Fullstack Developer</h1>
 
+<p align = "center">
+  <img src= "https://github.com/JosManoel/Bootcamp-MRV_Nave-Game/blob/main/assets/img/UI/banner1.png" width = "700"/>
+</p>
+
 Este projeto foi desenvolvido durante o Bootcamp MRV Fullstack Developer, oferecido em conjunto com a [MRV](https://www.mrv.com.br/), a [DIO (Digital Inovation One)](https://digitalinnovation.one/) e a [Órbi Conecta](https://orbi.co/). Durante a produção deste game foram utilizados vários conceitos apredendidos durante o curso, como o uso da orientação a objetos e o JQuery, com o intuito de facilitar o desenvolvimento.
 
 ***
@@ -7,11 +11,19 @@ Este projeto foi desenvolvido durante o Bootcamp MRV Fullstack Developer, oferec
 <h2 align="center">🛸 O Space Shooter</h2>
 O jogo produzido consiste em um game retrô semelhante ao Asteroids, desenvolvido em 1979 pela Atari. Sua gameplay consiste em destruir os asteroides antes que eles cheguem a nave, utilizando uma arma que lança bolas de energia. Conforme os asteroides são destruídos a pontuação total cresce, aumentando também a dificuldade do game de forma exponencial.
  
+<p align = "center">
+  <img src= "https://github.com/JosManoel/Bootcamp-MRV_Nave-Game/blob/main/assets/img/UI/banner4.png" width = "700"/>
+</p> 
+
 ***
 
 <h2 align="center">🎮 O Controles</h2>
 
 A movimentação e combate do game é feita exclusivamente pelo mouse, onde a movimentação da nave no eixo X é realizada pelo translado do mouse e o laser é lançado pelo botão esquerdo. Quando o game é iniciado o ponteiro do mouse é automaticamente ocultado, liberando toda a tela para visualização do combate com os asteroides. 
+
+<p align = "center">
+  <img src= "https://github.com/JosManoel/Bootcamp-MRV_Nave-Game/blob/main/assets/img/UI/banner2.png" width = "700"/>
+</p> 
 
 <h2 align="center">💻 Desenvolvimento</h2>
 
@@ -69,6 +81,29 @@ function blackListCheck(blackList, objectID){
 }
 
 ```
+<h3>Pontuação</h3>
+
+Além de um colisor próprio, também foi desenvolvido um sistema de pontuação, que salva maior pontuação utilizando o localStorage, que mantém os dados de score na máquina. Deste modo é possível observar a sua pontuação adquirida em game e a maior pontuação obtida entre as partidas. 
+ 
+```
+function getHighScore(currentScore){
+    var highScore = localStorage.getItem("HighScore");
+    
+    if (highScore == null){
+        localStorage.setItem("HighScore", currentScore);
+        return currentScore; 
+    } else if (currentScore >= highScore){
+        localStorage.setItem("HighScore", currentScore);
+        return currentScore; 
+    } else {
+        return highScore;
+    }
+}
+```
+
+<p align = "center">
+  <img src= "https://github.com/JosManoel/Bootcamp-MRV_Nave-Game/blob/main/assets/img/UI/banner3.png" width = "700"/>
+</p> 
 
 ***
 
