@@ -1,16 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MRV Bootcamp - Nave Game</title>
+    <title>Space Shooter - MRV Bootcamp</title>
 
+    <link rel="stylesheet" href="/assets/styles/style.css" type="text/css">
+    <link rel="shortcut icon" href="/assets/img/UI/icon.png" type="image/x-icon"/>
+</head>
+<body class="viewport" id="viewport">
+    <audio src="/assets/sounds/sfx_laser1.ogg" preload="auto" id="laserSound"></audio>
+    <audio src="/assets/sounds/sfx_explosion.mp3" preload="auto" id="explosionSound"></audio>
+    <audio src="/assets/sounds/sfx_lose.ogg" preload="auto" id="damageSound"></audio>
+
+    <div class="menu" id="menuScreen">
+        <div class="menu__title">
+            <img src="/assets/img/UI/SpaceShooterTitle.png" class="title__image">
+
+            <div class="title__menssage">
+                <h2>Use</h2> 
+                <img src="/assets/img/UI/mouseMove.png" class="menssage__mouse"> 
+                <h2>para movimentação</h2>
+            </div>
+
+            <div class="title__menssage">
+                <h2>Use</h2>
+                    <img src="/assets/img/UI/mouseClick.png" class="menssage__mouse">
+                <h2>para atirar</h2>
+            </div>
+
+            <button onclick="play()">Jogar !</button>
+        </div>
+    </div>
+
+    <div class="menu" id="gameOverScreen">
+        <div class="game-over__title">
+            <img src="/assets/img/UI/GameOverTitle.png" class="title__image">
+
+            <div class="">
+                <h2 class="score__text">HIGH SCORE:</h2>
+                <h2 id="highScore">0</h2>
+                <h2 class="score__text">SCORE:</h2>
+                <h2 id="finalScore">0</h2>
+            </div>
+
+            <button onclick="retry()">Reiniciar ?</button>
+        </div>
+    </div>
+
+    <div class="UI" id="interfaceGameScreen">
+        <div class="score">
+            <h2 class="score__text">SCORE:</h2>
+            <h2 class="score__counter" id="score">0</h2>
+        </div>
+
+        <div class="life">
+            <h2 class="life__counter" id="life">3</h2>
+            <img class="counter__indicator" src="/assets/img/UI/numeralX.png">
+            <img class = "life__animation" src="/assets/img/UI/playerLife1_blue.png">
+        </div>
+    </div>
+
+    <div class="fadeUI"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
     crossorigin="anonymous">
     </script> 
-</head>
-<body>
+
+    <script src="/assets/js/script.js"></script>
+    
 </body>
 </html>
