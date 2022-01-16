@@ -1,4 +1,4 @@
-<h1 align="center">Space Shoote - MRV Fullstack Developer</h1>
+<h1 align="center">Space Shooter - MRV Fullstack Developer</h1>
 
 <p align = "center">
   <img src= "https://github.com/JosManoel/Bootcamp-MRV_Nave-Game/blob/main/assets/img/UI/banner1.png" width = "700"/>
